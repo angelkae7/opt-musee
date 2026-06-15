@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="assets/css/style.css">
+<div class="container-cards">
+    <div class="carte" data-destination="frise.html">
+        <img class="carte-bg" src="assets/cards/card-bg.png" alt="">
+<div class="carte-illu-wrap">  
+        <img class="carte-illu" src="assets/cards/illu-poste.png" alt="Illustration bureau de poste NC">
+</div>
+        <img class="carte-timbre" src="assets/cards/icon-timbre.png" alt="">
+
+        <p class="carte-titre">
+            Histoire de la poste de<br>Nouvelle-Calédonie
+        </p>
+
+        <img class="carte-btn" src="assets/cards/btn-fleches.png" alt="Voir plus">
+    </div>
+
+    <div class="carte" data-destination="reseau.html">
+        <img class="carte-bg" src="assets/cards/card-bg.png" alt="">
+<div class="carte-illu-wrap">  
+        <img class="carte-illu" src="assets/cards/illu-reseau.png" alt="Illustration réseau postal NC">
+</div>
+        <img class="carte-timbre" src="assets/cards/icon-reseau.png" alt="">
+
+        <p class="carte-titre">
+            Voir le réseau
+        </p>
+
+        <img class="carte-btn" src="assets/cards/btn-fleches.png" alt="Voir plus">
+    </div>
+    <div class="carte" data-destination="memoire.html">
+        <img class="carte-bg" src="assets/cards/card-bg.png" alt="">
+<div class="carte-illu-wrap">  
+        <img class="carte-illu" src="assets/cards/illu-memoire.png" alt="Illustration réseau postal NC">
+</div>
+        <img class="carte-timbre" src="assets/cards/icon-memoire.png" alt="">
+
+        <p class="carte-titre">
+            Mémoire collective
+        </p>
+
+        <img class="carte-btn" src="assets/cards/btn-fleches.png" alt="Voir plus">
+    </div>
+    <div class="carte" data-destination="avant-apres.html">
+        <img class="carte-bg" src="assets/cards/card-bg.png" alt="">
+<div class="carte-illu-wrap">  
+        <img class="carte-illu" src="assets/cards/illu-avant-apres.png" alt="Illustration réseau postal NC">
+    </div>
+        <img class="carte-timbre" src="assets/cards/icon-avant-apres.png" alt="">
+
+        <p class="carte-titre">
+            Avant & après
+        </p>
+
+        <img class="carte-btn" src="assets/cards/btn-fleches.png" alt="Voir plus">
+    </div>
+    <div class="carte" data-destination="quiz.html">
+        <img class="carte-bg" src="assets/cards/card-bg.png" alt="">
+<div class="carte-illu-wrap"> 
+        <img class="carte-illu" src="assets/cards/illu-quiz.png" alt="Illustration réseau postal NC">
+</div>
+        <img class="carte-timbre" src="assets/cards/icon-quiz.png" alt="">
+
+        <p class="carte-titre">
+            Quiz
+        </p>
+
+        <img class="carte-btn" src="assets/cards/btn-fleches.png" alt="Voir plus">
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.carte').forEach(carte => {
+        carte.addEventListener('click', function (e) {
+            const destination = this.dataset.destination;
+
+            // 1. Stoppe les animations en boucle
+            this.classList.add('is-clicked');
+
+            // 2. Attend la fin de l'animation (350ms) puis navigue
+            setTimeout(() => {
+                window.location.href = destination;
+            }, 350);
+        });
+    });
+</script>

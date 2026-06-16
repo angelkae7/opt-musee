@@ -60,7 +60,7 @@ header {
 /* ─── SCENE — zone des cartes ─── */
 .scene {
   position: relative;
-  width: 680px;
+  width: 1080px;
   height: 960px;               /* 1200 - 180 header - 100 navbar */
 }
 
@@ -113,7 +113,7 @@ header {
   bottom: 64px; /* ← hauteur du logo-bar en dessous */
   left: 0;
 
-  width: 680px;
+  width: 1080px;
   height: 100px;
   z-index: 100;
 
@@ -176,7 +176,7 @@ header {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 680px;
+  width: 1080px;
   height: 64px;
   z-index: 100;
 
@@ -195,7 +195,7 @@ header {
 
 .container-cards {
   position: relative;
-  width: 680px;
+  width: 1080px;
   height: 1080px; /* zone de jeu des cartes, sous le header */
 }
 

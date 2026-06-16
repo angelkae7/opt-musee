@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=680, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=1080, initial-scale=1.0, user-scalable=no">
   <title>Relier les Vies — OPT-NC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&display=swap" rel="stylesheet">
@@ -21,45 +21,40 @@
   <!-- SCENE — cartes -->
   <main class="scene">
 
-     <!-- SVG liaisons — derrière les cartes -->
-  <svg class="liaisons" viewBox="0 0 680 856" xmlns="http://www.w3.org/2000/svg">
+    <!-- SVG liaisons — derrière les cartes -->
+    <svg class="liaisons" viewBox="0 0 1080 1370" xmlns="http://www.w3.org/2000/svg">
+      <!-- Liaison 1 → 2 -->
+      <path d="M 344 246 C 480 192, 608 288, 832 368"
+            stroke="#c8a96e" stroke-width="4" fill="none" stroke-linecap="round"/>
 
-    <!-- Liaison carte 1 → carte 2 -->
-    <path d="M 310 120 C 300 120, 380 180, 520 230" 
-          stroke="#c8a96e" stroke-width="3" fill="none" 
-          stroke-linecap="round"/>
+      <!-- Liaison 2 → 3 -->
+      <path d="M 832 560 C 640 608, 448 576, 224 640"
+            stroke="#8ec5d6" stroke-width="3.5" fill="none" stroke-linecap="round"/>
 
-    <!-- Liaison carte 2 → carte 3 -->
-    <path d="M 520 350 C 400 380, 280 360, 160 400" 
-          stroke="#8ec5d6" stroke-width="2.5" fill="none" 
-          stroke-linecap="round"/>
+      <!-- Liaison 3 → 4 -->
+      <path d="M 224 832 C 448 864, 608 800, 832 864"
+            stroke="#c8a96e" stroke-width="4" fill="none" stroke-linecap="round"/>
 
-    <!-- Liaison carte 3 → carte 4 -->
-    <path d="M 160 520 C 300 540, 400 500, 520 540" 
-          stroke="#c8a96e" stroke-width="3" fill="none" 
-          stroke-linecap="round"/>
+      <!-- Liaison 4 → 5 -->
+      <path d="M 864 1040 C 640 1120, 480 1088, 368 1152"
+            stroke="#8ec5d6" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    </svg>
 
-    <!-- Liaison carte 4 → carte 5 -->
-    <path d="M 540 650 C 400 700, 300 680, 230 720" 
-          stroke="#8ec5d6" stroke-width="2.5" fill="none" 
-          stroke-linecap="round"/>
+    <!-- Infos exposition — haut droite -->
+    <div class="expo-info expo-info--haut">
+      <p>Entrée libre et gratuite</p>
+      <p>tous les jours</p>
+      <p>de 10h à 19h</p>
+    </div>
 
-  </svg>
+    <!-- Infos exposition — bas droite -->
+    <div class="expo-info expo-info--bas">
+      <p>Château Hagen</p>
+      <p>du 11 mars</p>
+      <p>au 30 avril 2027</p>
+    </div>
 
-  <!-- Infos exposition — haut droite -->
-<div class="expo-info expo-info--haut">
-  <p>Entrée libre et gratuite</p>
-  <p>tous les jours</p>
-  <p>de 10h à 19h</p>
-</div>
-
-<!-- Infos exposition — bas droite -->
-<div class="expo-info expo-info--bas">
-  <p>Château Hagen</p>
-  <p>du 11 mars</p>
-  <p>au 30 avril 2027</p>
-</div>
-
+    <!-- Cartes -->
     <div class="carte" id="carte-frise" data-destination="frise.html">
       <img class="carte-bg"    src="assets/cards/card-bg.png" alt="">
       <div class="carte-illu-wrap">
@@ -110,27 +105,22 @@
       <img class="carte-btn"   src="assets/cards/btn-fleches.png" alt="Voir plus">
     </div>
 
-    <!-- Indication tactile — disparait au premier clic -->
-<div class="hint-touch" id="hint-touch">
-  <svg class="hint-hand" viewBox="0 0 80 80" fill="none">
-    <!-- Main stylisée qui pointe -->
-    <path d="M28.376 7.06201L32.623 7.23901C32.623 7.23901 34.339 7.32001 34.737 9.57301C35.135 11.826 37.717 27.449 37.717 27.449L51.526 28.988C55.596 28.988 58.582 32.273 58.582 36.324V56.503C58.582 60.554 55.908 62.583 51.84 62.583H33.578C29.508 62.583 13.209 51.267 12.209 48.28C11.848 47.2 11.617 46.562 11.47 45.791C11.209 44.428 11.209 43.772 11.209 43.772L13.525 44.158L26.209 45.883C26.209 45.883 26.797 11.31 26.797 9.22601C26.797 7.14201 28.376 7.06201 28.376 7.06201ZM28.376 3.06201C28.292 3.06201 28.208 3.06501 28.124 3.07001C25.541 3.23301 22.796 5.45301 22.796 9.24601C22.796 10.682 22.495 28.911 22.285 41.365L14.051 40.273L11.736 39.964C11.56 39.941 11.384 39.929 11.209 39.929C10.245 39.929 9.30698 40.279 8.57298 40.921C7.70598 41.681 7.20898 42.776 7.20898 43.929C7.20898 44.128 7.22498 45.204 7.54098 46.857C7.74898 47.945 8.04298 49.062 8.41598 50.175C9.21098 52.55 12.913 55.48 19.419 60.122C26.012 64.825 30.775 66.583 33.578 66.583H51.841C58.109 66.583 62.583 62.753 62.583 56.503V36.324C62.583 30.153 57.926 25.119 51.768 24.99L41.013 23.802C40.24 19.137 38.892 10.535 38.599 8.87701C37.943 5.16601 35.138 3.35601 32.773 3.24401L28.524 3.06601C28.469 3.06301 28.431 3.06201 28.376 3.06201Z" fill="#096284"/>
-<path d="M54.583 55.354C54.03 55.354 53.583 54.907 53.583 54.354V38.706C53.583 36.35 52.125 34.574 49.775 34.574L45.46 34.172C44.911 34.122 44.585 33.635 44.636 33.085C44.686 32.535 45.201 31.634 45.762 31.682L50.181 31.583C50.183 31.583 50.185 31.583 50.187 31.583C53.527 31.583 55.583 35.27 55.583 38.706V54.354C55.583 54.907 55.134 55.354 54.583 55.354Z" fill="#096284"/>
-<path d="M42.298 33.558C42.263 33.558 42.226 33.556 42.191 33.552L40.015 33.32C39.466 33.261 39.068 32.769 39.126 32.219C39.185 31.67 39.681 31.278 40.228 31.331L42.404 31.563C42.953 31.622 43.349 32.114 43.291 32.664C43.235 33.177 42.802 33.558 42.298 33.558Z" fill="#096284"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M32.4141 7.17676C32.4246 7.17728 34.1315 7.26489 34.5283 9.51074C34.9253 11.758 37.4947 27.3076 37.5078 27.3867L51.3174 28.9258C55.3871 28.926 58.3729 32.211 58.373 36.2617V56.4414C58.3729 60.4921 55.6987 62.5215 51.6309 62.5215H33.3691C29.2991 62.5215 13 51.2048 12 48.2178C11.639 47.1379 11.4077 46.4995 11.2607 45.7285C10.9998 44.3659 11 43.71 11 43.71L13.3164 44.0957L26 45.8213C26 45.8213 26.5879 11.2487 26.5879 9.16406C26.5879 7.08271 28.163 7.00021 28.167 7L32.4141 7.17676ZM49.9717 31.5215L45.5527 31.6201C44.9918 31.5724 44.4768 32.4735 44.4268 33.0234C44.376 33.5733 44.7021 34.0604 45.251 34.1104L49.5664 34.5117C51.916 34.5119 53.3738 36.2879 53.374 38.6436V54.292C53.374 54.845 53.821 55.292 54.374 55.292C54.925 55.292 55.374 54.845 55.374 54.292V38.6436C55.3738 35.2077 53.3174 31.5215 49.9775 31.5215H49.9717ZM40.0186 31.2686C39.4717 31.2158 38.976 31.6084 38.917 32.1572C38.8591 32.707 39.2569 33.1986 39.8057 33.2578L41.9824 33.4902C42.0172 33.4942 42.0541 33.4961 42.0889 33.4961C42.5929 33.4961 43.026 33.1146 43.082 32.6016C43.1398 32.0518 42.744 31.5601 42.1953 31.501L40.0186 31.2686Z" fill="#ffffff"/>
-    <!-- Cercles d'onde du tap -->
-    <circle class="wave wave-1" cx="40" cy="40" r="34" fill="none" stroke="#c8962a" stroke-width="2" opacity="0"/>
-    <circle class="wave wave-2" cx="40" cy="40" r="34" fill="none" stroke="#c8962a" stroke-width="2" opacity="0"/>
-  </svg>
-  <p class="hint-text">Touchez une carte<br>pour découvrir</p>
-</div>
+    <!-- Indication tactile -->
+    <div class="hint-touch" id="hint-touch">
+      <svg class="hint-hand" viewBox="0 0 80 80" fill="none">
+        <path d="M28.376 7.06201L32.623 7.23901C32.623 7.23901 34.339 7.32001 34.737 9.57301C35.135 11.826 37.717 27.449 37.717 27.449L51.526 28.988C55.596 28.988 58.582 32.273 58.582 36.324V56.503C58.582 60.554 55.908 62.583 51.84 62.583H33.578C29.508 62.583 13.209 51.267 12.209 48.28C11.848 47.2 11.617 46.562 11.47 45.791C11.209 44.428 11.209 43.772 11.209 43.772L13.525 44.158L26.209 45.883C26.209 45.883 26.797 11.31 26.797 9.22601C26.797 7.14201 28.376 7.06201 28.376 7.06201ZM28.376 3.06201C28.292 3.06201 28.208 3.06501 28.124 3.07001C25.541 3.23301 22.796 5.45301 22.796 9.24601C22.796 10.682 22.495 28.911 22.285 41.365L14.051 40.273L11.736 39.964C11.56 39.941 11.384 39.929 11.209 39.929C10.245 39.929 9.30698 40.279 8.57298 40.921C7.70598 41.681 7.20898 42.776 7.20898 43.929C7.20898 44.128 7.22498 45.204 7.54098 46.857C7.74898 47.945 8.04298 49.062 8.41598 50.175C9.21098 52.55 12.913 55.48 19.419 60.122C26.012 64.825 30.775 66.583 33.578 66.583H51.841C58.109 66.583 62.583 62.753 62.583 56.503V36.324C62.583 30.153 57.926 25.119 51.768 24.99L41.013 23.802C40.24 19.137 38.892 10.535 38.599 8.87701C37.943 5.16601 35.138 3.35601 32.773 3.24401L28.524 3.06601C28.469 3.06301 28.431 3.06201 28.376 3.06201Z" fill="#096284"/>
+        <path d="M54.583 55.354C54.03 55.354 53.583 54.907 53.583 54.354V38.706C53.583 36.35 52.125 34.574 49.775 34.574L45.46 34.172C44.911 34.122 44.585 33.635 44.636 33.085C44.686 32.535 45.201 31.634 45.762 31.682L50.181 31.583C50.183 31.583 50.185 31.583 50.187 31.583C53.527 31.583 55.583 35.27 55.583 38.706V54.354C55.583 54.907 55.134 55.354 54.583 55.354Z" fill="#096284"/>
+        <path d="M42.298 33.558C42.263 33.558 42.226 33.556 42.191 33.552L40.015 33.32C39.466 33.261 39.068 32.769 39.126 32.219C39.185 31.67 39.681 31.278 40.228 31.331L42.404 31.563C42.953 31.622 43.349 32.114 43.291 32.664C43.235 33.177 42.802 33.558 42.298 33.558Z" fill="#096284"/>
+        <circle class="wave wave-1" cx="40" cy="40" r="34" fill="none" stroke="#c8962a" stroke-width="2" opacity="0"/>
+        <circle class="wave wave-2" cx="40" cy="40" r="34" fill="none" stroke="#c8962a" stroke-width="2" opacity="0"/>
+      </svg>
+      <p class="hint-text">Touchez une carte<br>pour découvrir</p>
+    </div>
 
   </main>
 
   <!-- NAVBAR -->
-
   <nav class="navbar">
-
     <button class="nav-btn" onclick="window.location.href='index.html'" aria-label="Accueil">
       <img src="assets/images/btn-home.png" alt="Accueil">
       <span>Accueil</span>
@@ -142,34 +132,28 @@
       <img src="assets/images/btn-infos.png" alt="Informations">
       <span>Infos</span>
     </button>
-
   </nav>
 
-  <!-- LOGO BAR — en dessous de la navbar -->
+  <!-- LOGO BAR -->
   <div class="logo-bar">
     <img src="assets/images/logo-opt-nc.png" alt="OPT Nouvelle-Calédonie">
   </div>
 
-  <script src="assets/js/navigation.js"></script>
+  <script>
+    document.querySelectorAll('.carte').forEach(carte => {
+      carte.addEventListener('click', function() {
+        const destination = this.dataset.destination;
+        const scene = document.querySelector('.scene');
+
+        scene.classList.add('has-clicked');
+        this.classList.add('is-clicked');
+
+        setTimeout(() => {
+          window.location.href = destination;
+        }, 600);
+      });
+    });
+  </script>
 
 </body>
-<script>
-  document.querySelectorAll('.carte').forEach(carte => {
-    carte.addEventListener('click', function() {
-      const destination = this.dataset.destination;
-      const scene = document.querySelector('.scene');
-
-      // 1. Marque la scène pour que les AUTRES cartes s'effacent
-      scene.classList.add('has-clicked');
-
-      // 2. Marque la carte cliquée pour qu'elle zoome
-      this.classList.add('is-clicked');
-
-      // 3. Navigation après l'animation complète (600ms)
-      setTimeout(() => {
-        window.location.href = destination;
-      }, 600);
-    });
-  });
-</script>
 </html>

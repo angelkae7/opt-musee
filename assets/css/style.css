@@ -1,7 +1,7 @@
 /* ─── BODY — fond de page ─── */
 body {
   width: 1080px;
-  height: 1200px;
+  height: 1920px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -17,7 +17,7 @@ body {
 /* ─── HEADER — bande bleue du haut ─── */
 header {
   width: 100%;
-  height: 180px;                /* ajuste selon ton image header */
+  height: 290px;
 
   background-image: url('../images/header-accueil.png');
   background-size: cover;
@@ -27,15 +27,15 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
 
-  padding: 0 40px;
+  padding: 0 64px;
 }
 
 .header-titre {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 84px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
@@ -46,107 +46,99 @@ header {
 
 .header-sous-titre {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 22px;
   letter-spacing: 0.10em;
   text-align: center;
   text-transform: uppercase;
   color: rgba(255,255,255,0.85);
-  width: 100%; /* ← ajoute ça */
+  width: 100%;
   margin: 0;
-  padding: 0 20px; /* ← réduit le padding */
-  line-height: 1.5; /* ← ajoute ça pour le retour à la ligne */
+  padding: 0 32px;
+  line-height: 1.5;
 }
 
 /* ─── SCENE — zone des cartes ─── */
 .scene {
   position: relative;
   width: 1080px;
-  height: 960px;               /* 1200 - 180 header - 100 navbar */
+  height: 1370px; /* 1920 - 290 header - 160 navbar - 100 logo-bar */
 }
 
 /* ─── INFOS EXPOSITION ─── */
 .expo-info {
   position: absolute;
-  right: 20px;
+  right: 32px;
   text-align: right;
-  z-index: 0; /* derrière les cartes */
+  z-index: 0;
   pointer-events: none;
 }
 
 .expo-info p {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
-  font-size: 11px;
+  font-size: 18px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   line-height: 1.8;
   margin: 0;
 }
 
-/* Ligne dorée décorative au-dessus du texte */
 .expo-info::before {
   content: '';
   display: block;
-  width: 40px;
-  height: 1px;
+  width: 64px;
+  height: 2px;
   background: #c8a96e;
   margin-left: auto;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
-/* Position haut droite — entre carte 1 et carte 2 */
 .expo-info--haut {
-  top: 20px;
+  top: 30px;
   color: #ffffff;
 }
 
-/* Position bas droite — entre carte 4 et carte 5 */
 .expo-info--bas {
-  bottom: 170px;
-    color: #096284;
+  bottom: 270px;
+  color: #096284;
 }
 
-/* ─── NAVBAR — barre bas ─── */
-
+/* ─── NAVBAR ─── */
 .navbar {
   position: fixed;
-  bottom: 64px; /* ← hauteur du logo-bar en dessous */
+  bottom: 100px;
   left: 0;
 
   width: 1080px;
-  height: 100px;
+  height: 160px;
   z-index: 100;
 
   background: #096284;
-  border-top: 3px solid #c8962a;
+  border-top: 5px solid #c8962a;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  padding: 0 40px;
 }
 
-.navbar-spacer {
-  flex: 1; /* pousse les boutons aux extrémités */
-}
+.navbar-spacer { flex: 1; }
 
-/* ─── BOUTONS NAV ─── */
 .nav-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
 
   background: none;
   border: none;
   cursor: pointer;
   touch-action: manipulation;
-  padding: 8px;
+  padding: 12px;
 
-  /* Touch target 72px minimum */
-  min-width: 72px;
-  min-height: 72px;
+  min-width: 115px;
+  min-height: 115px;
 
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
@@ -157,31 +149,31 @@ header {
 }
 
 .nav-btn img {
-  width: 52px;
-  height: 52px;
+  width: 84px;
+  height: 84px;
   object-fit: contain;
 }
 
 .nav-btn span {
   font-family: 'Titillium Web', sans-serif;
-  font-size: 11px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
 }
 
-/* ─── LOGO BAR — bande du bas ─── */
+/* ─── LOGO BAR ─── */
 .logo-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 1080px;
-  height: 64px;
+  height: 100px;
   z-index: 100;
 
   background: #ffffff;
-  border-top: 1px solid #e0d5c0;
+  border-top: 2px solid #e0d5c0;
 
   display: flex;
   align-items: center;
@@ -189,46 +181,38 @@ header {
 }
 
 .logo-bar img {
-  height: 44px;
+  height: 70px;
   width: auto;
 }
 
-.container-cards {
-  position: relative;
-  width: 1080px;
-  height: 1080px; /* zone de jeu des cartes, sous le header */
-}
-
-/* ─── CARTE ─────────────────────────────── */
+/* ─── CARTE ─── */
 .carte {
   position: absolute;
-  width: 180px;  /* ← était 280px */
-  height: 252px; /* ← était 390px, garde le ratio 280/390 ≈ 0.85 */
+  width: 288px;
+  height: 403px;
   cursor: pointer;
   touch-action: manipulation;
-  filter: drop-shadow(0px 8px 24px rgba(0,0,0,0.25));
+  filter: drop-shadow(0px 12px 36px rgba(0,0,0,0.25));
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-#carte-frise { top:  30px; left: 130px; transform: rotate(-3deg);  z-index: 5; }
-#carte-reseau { top: 110px; right: 70px; transform: rotate(2deg);  z-index: 4; }
-#carte-memoire { top: 300px; left:  50px; transform: rotate(4deg); z-index: 3; }
-#carte-avant-apres { top: 400px; right: 70px; transform: rotate(3deg);  z-index: 2; }
-#carte-quiz { top: 560px; left: 150px; transform: rotate(-1deg); z-index: 1; }
+#carte-frise       { top:  50px;  left: 200px;  transform: rotate(-3deg); z-index: 5; }
+#carte-reseau      { top: 175px;  right: 110px; transform: rotate(2deg);  z-index: 4; }
+#carte-memoire     { top: 480px;  left:  80px;  transform: rotate(4deg);  z-index: 3; }
+#carte-avant-apres { top: 640px;  right: 110px; transform: rotate(3deg);  z-index: 2; }
+#carte-quiz        { top: 900px;  left: 240px;  transform: rotate(-1deg); z-index: 1; }
 
 .carte:active {
   transform: scale(0.97);
-  /* z-index: 10; au-dessus des autres pendant le clic */
 }
 
-/* ─── COUCHE 1 : fond de carte ───────────── */
 .carte-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 10px;
   z-index: 1;
 }
 
@@ -238,61 +222,54 @@ header {
   aspect-ratio: 1;
   top: 7%;
   left: 50%;
-  transform: translateX(-50%);  /* positionnement ici */
+  transform: translateX(-50%);
   overflow: hidden;
   z-index: 2;
 }
 
-/* ─── COUCHE 2 : illustration dans le cercle */
 .carte-illu {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  animation: illu-breathe 4s ease-in-out infinite; /* animation ici */
+  animation: illu-breathe 4s ease-in-out infinite;
 }
 
-/* ─── COUCHE 3 : timbre médaillon ─────────── */
 .carte-timbre {
   position: absolute;
   width: 18%;
   aspect-ratio: 1;
-  bottom: 32%;          /* jonction cercle / zone texte */
+  bottom: 32%;
   left: 49.5%;
   transform: translateX(-50%);
-  
   z-index: 3;
 }
 
-/* ─── COUCHE 4 : titre ────────────────────── */
 .carte-titre {
   position: absolute;
   bottom: 11%;
   left: 0;
   right: 0;
-  padding: 0 24px;
-  
+  padding: 0 32px;
+
   font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 22px;
   line-height: 1.3;
   text-align: center;
-  color: #096284;       /* bleu foncé charte OPT-NC */
-  
+  color: #096284;
+
   z-index: 4;
 }
 
-#carte-frise .carte-titre { bottom:3%; color: #c8962a; } /* doré charte OPT-NC */
+#carte-frise .carte-titre { bottom: 3%; color: #c8962a; }
 
-
-/* ─── COUCHE 5 : bouton flèche ───────────── */
 .carte-btn {
   position: absolute;
   width: 14%;
   aspect-ratio: 1;
   bottom: 4%;
   right: 5%;
-  
   z-index: 5;
 }
 
@@ -304,19 +281,16 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 50; /* au-dessus des cartes */
-  
+  z-index: 50;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  
-  pointer-events: none; /* ne bloque pas les clics sur les cartes */
-  
-  /* Légère ombre portée pour ressortir du fond */
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.3));
-  
-  /* Animation d'apparition au chargement */
+  gap: 18px;
+
+  pointer-events: none;
+  filter: drop-shadow(0 6px 24px rgba(0,0,0,0.3));
+
   animation: hint-appear 1s ease 1.5s both;
 }
 
@@ -325,33 +299,21 @@ header {
   100% { opacity: 1; transform: translate(-50%, -50%) scale(1);   }
 }
 
-/* La main qui tape */
 .hint-hand {
-  width: 90px;
-  height: 90px;
+  width: 144px;
+  height: 144px;
   animation: hand-tap 2s ease-in-out infinite;
 }
 
 @keyframes hand-tap {
   0%, 100% { transform: scale(1)    translateY(0);   }
-  40%      { transform: scale(0.88) translateY(8px); }
-  60%      { transform: scale(0.88) translateY(8px); }
+  40%      { transform: scale(0.88) translateY(12px); }
+  60%      { transform: scale(0.88) translateY(12px); }
 }
 
-/* Ondes du tap qui se propagent */
-.hint-hand .wave {
-  transform-origin: 40px 40px;
-}
-
-.hint-hand .wave-1 {
-  animation: wave-expand 2s ease-out infinite;
-  animation-delay: 0.5s;
-}
-
-.hint-hand .wave-2 {
-  animation: wave-expand 2s ease-out infinite;
-  animation-delay: 1.2s;
-}
+.hint-hand .wave { transform-origin: 40px 40px; }
+.hint-hand .wave-1 { animation: wave-expand 2s ease-out infinite; animation-delay: 0.5s; }
+.hint-hand .wave-2 { animation: wave-expand 2s ease-out infinite; animation-delay: 1.2s; }
 
 @keyframes wave-expand {
   0%   { opacity: 0;   transform: scale(0.3); }
@@ -359,32 +321,29 @@ header {
   100% { opacity: 0;   transform: scale(1.4); }
 }
 
-/* Texte d'indication */
 .hint-text {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 26px;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   text-align: center;
   color: #096284;
   background: rgba(255, 255, 255, 0.92);
-  padding: 12px 24px;
-  border-radius: 30px;
-  border: 2px solid #c8962a;
+  padding: 19px 38px;
+  border-radius: 48px;
+  border: 3px solid #c8962a;
   line-height: 1.4;
   margin: 0;
-  
-  /* Pulse subtil du texte */
+
   animation: hint-text-pulse 2s ease-in-out infinite;
 }
 
 @keyframes hint-text-pulse {
   0%, 100% { box-shadow: 0 0 0 rgba(200, 150, 42, 0);    }
-  50%      { box-shadow: 0 0 24px rgba(200, 150, 42, 0.5); }
+  50%      { box-shadow: 0 0 38px rgba(200, 150, 42, 0.5); }
 }
 
-/* Quand on clique, l'indication disparaît */
 .scene.has-clicked .hint-touch {
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -393,19 +352,26 @@ header {
 /* ══════════════════════════════════════
    ANIMATIONS EN BOUCLE
 ══════════════════════════════════════ */
-
 @keyframes liaison-pulse {
-  0%   { stroke-dashoffset: 800; opacity: 0.3; }
+  0%   { stroke-dashoffset: 1280; opacity: 0.3; }
   50%  { opacity: 1; }
-  100% { stroke-dashoffset: 0;   opacity: 0.3; }
+  100% { stroke-dashoffset: 0;    opacity: 0.3; }
+}
+
+.liaisons {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .liaisons path {
-  stroke-dasharray: 800;
+  stroke-dasharray: 1280;
   animation: liaison-pulse 6s ease-in-out infinite;
 }
 
-/* Décalage entre chaque liaison pour un effet en cascade */
 .liaisons path:nth-child(1) { animation-delay: 0s;   }
 .liaisons path:nth-child(2) { animation-delay: 1.5s; }
 .liaisons path:nth-child(3) { animation-delay: 3s;   }
@@ -419,17 +385,16 @@ header {
 .expo-info--haut { animation: fade-in-up 1s ease 0.5s both; }
 .expo-info--bas  { animation: fade-in-up 1s ease 1s both;   }
 
-/* ANIMATION CARTE*/
 @keyframes carte-flotte {
   0%, 100% { translate: 0 0;    }
-  50%      { translate: 0 -4px; }
+  50%      { translate: 0 -6px; }
 }
 
-#carte-frise       { animation: carte-flotte 4s ease-in-out infinite;       animation-delay: 0s;   }
-#carte-reseau      { animation: carte-flotte 4.5s ease-in-out infinite;     animation-delay: 0.3s; }
-#carte-memoire     { animation: carte-flotte 5s ease-in-out infinite;       animation-delay: 0.6s; }
-#carte-avant-apres { animation: carte-flotte 4.2s ease-in-out infinite;     animation-delay: 0.9s; }
-#carte-quiz        { animation: carte-flotte 4.8s ease-in-out infinite;     animation-delay: 1.2s; }
+#carte-frise       { animation: carte-flotte 4s ease-in-out infinite; }
+#carte-reseau      { animation: carte-flotte 4.5s ease-in-out infinite; animation-delay: 0.3s; }
+#carte-memoire     { animation: carte-flotte 5s ease-in-out infinite;   animation-delay: 0.6s; }
+#carte-avant-apres { animation: carte-flotte 4.2s ease-in-out infinite; animation-delay: 0.9s; }
+#carte-quiz        { animation: carte-flotte 4.8s ease-in-out infinite; animation-delay: 1.2s; }
 
 @keyframes titre-glow {
   0%, 100% { text-shadow: 0 2px 12px rgba(0,0,0,0.4),
@@ -438,74 +403,64 @@ header {
                           0 0 32px rgba(255,255,255,0.7),
                           0 0 48px rgba(200,169,110,0.5); }
 }
+
 .header-titre {
   animation: titre-glow 5s ease-in-out infinite;
 }
 
-/* Flèche — glissement horizontal doux */
 @keyframes fleche-glisse {
   0%, 100% { transform: translateX(0);    opacity: 1;    }
-  50%       { transform: translateX(5px); opacity: 0.65; }
+  50%       { transform: translateX(8px); opacity: 0.65; }
 }
 
 .carte-btn {
   animation: fleche-glisse 2.4s ease-in-out infinite;
 }
 
-/* Timbre — pulse lumineux doré */
 @keyframes timbre-pulse {
-  0%, 100% { filter: brightness(1)    drop-shadow(0 0 0px  rgba(200,150,42,0));    }
-  50%       { filter: brightness(1.15) drop-shadow(0 0 10px rgba(218, 151, 7, 0.6)); }
+  0%, 100% { filter: brightness(1)    drop-shadow(0 0 0px rgba(200,150,42,0));    }
+  50%       { filter: brightness(1.15) drop-shadow(0 0 16px rgba(218, 151, 7, 0.6)); }
 }
 
 .carte-timbre {
   animation: timbre-pulse 1.5s ease-in-out infinite;
 }
 
-/* Keyframes sans translateX — il est sur le parent */
 @keyframes illu-breathe {
-  0%, 100% { transform: scale(1.00) rotate(0deg);   }
+  0%, 100% { transform: scale(1.00) rotate(0deg);    }
   33%       { transform: scale(1.01) rotate(0.4deg); }
   66%       { transform: scale(1.00) rotate(-0.3deg);}
 }
 
-
 /* ══════════════════════════════════════
-   ANIMATION AU CLIC
+   ANIMATIONS CLIC
 ══════════════════════════════════════ */
-/* ══════════════════════════════════════
-   ANIMATIONS CLIC — 3 PHASES
-══════════════════════════════════════ */
-
-/* Phase 1+2+3 : la carte cliquée — press, highlight, zoom */
 @keyframes carte-zoom-out {
   0% {
     transform: scale(1) rotate(var(--rot, 0deg));
-    filter: drop-shadow(0px 8px 24px rgba(0,0,0,0.25));
+    filter: drop-shadow(0px 12px 36px rgba(0,0,0,0.25));
   }
   20% {
     transform: scale(0.94) rotate(var(--rot, 0deg));
-    filter: drop-shadow(0px 4px 12px rgba(0,0,0,0.4));
+    filter: drop-shadow(0px 6px 18px rgba(0,0,0,0.4));
   }
   50% {
     transform: scale(1.08) rotate(var(--rot, 0deg));
-    filter: drop-shadow(0px 16px 48px rgba(200,169,110,0.8))
-            drop-shadow(0px 0px 24px rgba(255,255,255,0.6));
+    filter: drop-shadow(0px 24px 72px rgba(200,169,110,0.8))
+            drop-shadow(0px 0px 36px rgba(255,255,255,0.6));
   }
   100% {
     transform: scale(1.6) rotate(0deg);
-    filter: drop-shadow(0px 0px 60px rgba(200,169,110,1));
+    filter: drop-shadow(0px 0px 90px rgba(200,169,110,1));
     opacity: 0;
   }
 }
 
-/* Les AUTRES cartes — disparaissent dans le fond */
 @keyframes carte-fade-out {
   0%   { opacity: 1; transform: scale(1) rotate(var(--rot, 0deg)); }
   100% { opacity: 0; transform: scale(0.85) rotate(var(--rot, 0deg)); }
 }
 
-/* Timbre — rotation cachet pendant le zoom */
 @keyframes timbre-stamp {
   0%   { transform: translateX(-50%) rotate(0deg)   scale(1);    }
   30%  { transform: translateX(-50%) rotate(25deg)  scale(1.3);  }
@@ -513,17 +468,15 @@ header {
   100% { transform: translateX(-50%) rotate(0deg)   scale(1.5);  }
 }
 
-/* Illustration — flash blanc */
 @keyframes illu-flash {
   0%   { filter: brightness(1);   }
   30%  { filter: brightness(1.6); }
   100% { filter: brightness(1.2); }
 }
 
-/* Classes appliquées par JS */
 .carte.is-clicked {
   animation: carte-zoom-out 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  z-index: 100;  /* passe au-dessus de tout */
+  z-index: 100;
 }
 
 .carte.is-clicked .carte-timbre {
@@ -534,13 +487,12 @@ header {
   animation: illu-flash 0.6s ease forwards;
 }
 
-/* Les autres cartes s'effacent */
 .scene.has-clicked .carte:not(.is-clicked) {
   animation: carte-fade-out 0.4s ease forwards;
 }
 
-/* Pendant le clic — désactive les animations en boucle */
-.carte.is-clicked,
-.scene.has-clicked .carte {
-  animation-iteration-count: 1;
-}
+#carte-frise       { --rot: -3deg; }
+#carte-reseau      { --rot:  2deg; }
+#carte-memoire     { --rot:  4deg; }
+#carte-avant-apres { --rot:  3deg; }
+#carte-quiz        { --rot: -1deg; }
